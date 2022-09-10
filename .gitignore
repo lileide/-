@@ -11,6 +11,7 @@
 .mtj.tmp/
 
 # Package Files #
+
 *.jar
 *.war
 *.nar
@@ -21,3 +22,37 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+public class 自动售货机 {
+	int price=50;
+	int balance;
+	int total;
+	void showPrompt() {
+		System.out.println("welcome");
+	}
+	void insertMomey(int amount) {
+		balance=balance+amount;
+	}
+	void showBalance() {
+		System.out.println(balance);
+	}
+	void getFood() {
+		if(balance>=price) {
+		System.out.println("here you are.");
+		balance=balance-price;
+		total=total+price;
+		}	
+	}
+	public static void main(String[] args) {
+		// TODO 自动生成的方法存根
+		自动售货机 vm=new 自动售货机();
+		vm.showPrompt();
+		vm.showBalance();
+		vm.insertMomey(100);
+		vm.getFood();
+		vm.showBalance();
+		自动售货机 vm1=new 自动售货机();
+		vm1.insertMomey(200);
+		vm1.showBalance();
+	}
+
+}
